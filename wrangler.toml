@@ -1,0 +1,34 @@
+name = "dohp"
+main = "src/worker.js"
+compatibility_date = "2025-05-01"
+workers_dev = true
+
+# Smart Placement moves the Worker closer to your upstream resolvers,
+# cutting round-trip latency on cache misses.
+[placement]
+mode = "smart"
+
+[observability]
+enabled = true
+
+[vars]
+ENVIRONMENT = "production"
+
+# KV namespace backing adaptive provider routing (RTT + reliability metrics).
+# Create your own with:  npx wrangler kv namespace create DOHP_METRICS
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "DOHP_METRICS"
+id = "d15355a75be545c4815bdaebc702f740"
+
+# Periodic health probe + metric refresh (every 5 minutes).
+[triggers]
+crons = ["*/5 * * * *"]
+
+[env.dev]
+name = "dohp-dev"
+vars = { ENVIRONMENT = "development" }
+
+[env.production]
+name = "dohp"
+vars = { ENVIRONMENT = "production" }

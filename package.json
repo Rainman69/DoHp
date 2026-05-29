@@ -1,0 +1,36 @@
+{
+  "name": "dohp",
+  "version": "1.0.0",
+  "description": "DoHp — a professional, ultra-fast DNS-over-HTTPS proxy for Cloudflare Workers with provider racing, adaptive routing, TTL-aware caching, and a JSON DNS API.",
+  "type": "module",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "tail": "wrangler tail",
+    "kv:create": "wrangler kv namespace create DOHP_METRICS",
+    "test": "node test/test.mjs"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "dns",
+    "doh",
+    "dns-over-https",
+    "rfc8484",
+    "proxy",
+    "privacy",
+    "adblock",
+    "low-latency",
+    "racing",
+    "adaptive-routing",
+    "caching"
+  ],
+  "author": "Rainman69",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  }
+}
