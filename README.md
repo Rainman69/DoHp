@@ -10,8 +10,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-22d3a6.svg)](LICENSE)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&logoColor=white)
 
-🔗 **Live demo:** [`https://dohp.dohp-rainman.workers.dev`](https://dohp.dohp-rainman.workers.dev)
-
 </div>
 
 ---
